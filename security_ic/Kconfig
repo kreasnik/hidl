@@ -1,0 +1,5 @@
+config HCT_SECURITY_IC_SUPPORT
+  bool "HCT_SECURITY_IC_SUPPORT"
+  default n
+
+source "drivers/misc/mediatek/security_ic/ESP8266/Kconfig"

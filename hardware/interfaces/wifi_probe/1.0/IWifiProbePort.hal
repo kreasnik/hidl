@@ -1,0 +1,22 @@
+package vendor.hct.hardware.wifi_probe@1.0;
+import IWifiProbeCallback;
+
+interface IWifiProbePort {
+    struct ProbeData {
+        uint8_t state;
+        string type;
+        string result;
+    };
+    wifi_probe_open() generates (int32_t result);
+    wifi_probe_close() generates (int32_t result);
+    wifi_probe_start_search() generates (int32_t result);
+    wifi_probe_stop_search() generates (int32_t result);
+    wifi_probe_get_version() generates (string result);
+    wifi_probe_start_firmware_upgrade(vec<uint8_t> upgrade_data, int32_t upgrade_data_len) generates (int32_t result);
+    wifi_probe_set_rate(int32_t rate) generates (int32_t result);
+    wifi_probe_get_data() generates (ProbeData probe_data);
+    oneway wifi_probe_get_eint(bool start, IWifiProbeCallback cb);
+    wifi_probe_set_firmware_size(int32_t size) generates (int32_t result);
+    wifi_probe_set_firmware_done(int32_t size) generates (int32_t result);
+};
+

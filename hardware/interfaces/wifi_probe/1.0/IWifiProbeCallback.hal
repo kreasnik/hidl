@@ -1,0 +1,6 @@
+package vendor.hct.hardware.wifi_probe@1.0;
+
+interface IWifiProbeCallback {
+    reportResults(int32_t respond);
+};
+

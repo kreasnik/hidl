@@ -1,0 +1,14 @@
+package vendor.hct.hardware.talkie@1.0;
+import ITalkiePortCallback;
+
+interface ITalkiePort {
+    talkie_init() generates (int32_t result);
+    talkie_deinit() generates (int32_t result);
+    talkie_app_start() generates (int32_t result);
+    talkie_app_exit() generates (int32_t result);
+    talkie_ppt_down(int32_t arg) generates (int32_t result);
+    talkie_ppt_up(int32_t arg) generates (int32_t result);
+    talkie_speak_disable() generates (int32_t result);
+    oneway talkie_speak_enable(ITalkiePortCallback cb);
+};
+

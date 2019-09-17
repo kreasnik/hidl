@@ -1,0 +1,6 @@
+package vendor.hct.hardware.talkie@1.0;
+
+interface ITalkiePortCallback {
+    reportResults(int32_t respond);
+};
+

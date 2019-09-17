@@ -1,0 +1,4 @@
+
+config SECURITY_IC_ESP8266
+        bool "SECURITY_IC_ESP8266"
+        default n
